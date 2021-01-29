@@ -3,7 +3,7 @@ Feature: Convert given arabic numbers to roman
   Scenario Outline: Conversion of arabic numbers to roman
     Given we have <arabic> number and number convertion program
     When we have <roman> number
-    Then the program should return correct roman number
+    Then the program's result should be correct
 
     Examples:
       | arabic | roman   |

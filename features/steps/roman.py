@@ -9,11 +9,12 @@ def step_impl(context, arabic):
     context.arabic = int(arabic)
     context.roman_convert = Roman()
 
+
 @when('we have (?P<roman>.+) number')
 def step_impl(context, roman):
     context.roman = roman
 
 
-@then('the program should return correct roman number')
+@then('the program\'s result should be correct')
 def step_impl(context):
     assert context.roman == context.roman_convert.roman(context.arabic)
